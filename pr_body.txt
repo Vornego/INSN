@@ -1,0 +1,10 @@
+This PR includes build and compatibility fixes applied to get a clean build on modern toolchains and OpenSSL 3:
+
+- Disambiguate `filesystem` usages to `boost::filesystem` where needed
+- Fixed syntax/brace errors and added bounds in `src/smessage` to prevent unbounded allocations
+- OpenSSL compatibility: added BIGNUM include and switched secp256k1 tests to `ECDSA_SIG_get0` accessors
+- Added `boost_chrono` linker flag in `src/makefile.unix` to resolve linking of `boost::chrono`
+
+Remaining tasks (suggested): run sanitizers (ASan/UBSan), full runtime smoke tests, and plan migration away from deprecated OpenSSL APIs to EVP-based APIs.
+
+CI: none in this workspace — please run CI on the PR.

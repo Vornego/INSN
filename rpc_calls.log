@@ -1,0 +1,181 @@
+--- ITER 1 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"icbjQYksRDzSHSkTXc6PsJLBjuM1af5XXd","error":null,"id":"rpc"}
+--- ITER 2 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"imH5UNSbpgQTCa4zwic1xeiPEtkFAZ5Uqm","error":null,"id":"rpc"}
+--- ITER 3 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iotqWNRVfow2grSDFBm7yrcwkTtRuXL4Wx","error":null,"id":"rpc"}
+--- ITER 4 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iTgd4HihAcqLgu5YLMBhkTtgcribUEHAnJ","error":null,"id":"rpc"}
+--- ITER 5 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"imU3FuX416VKgsAYkRDjGXqTi3BMdQGRsE","error":null,"id":"rpc"}
+--- ITER 6 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ipNVi76TYzvX7z9rB92EPk3oP7ajh8okEB","error":null,"id":"rpc"}
+--- ITER 7 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"icnvPYFYBWdgPWJDQVvKZViQT5CeNYv5S9","error":null,"id":"rpc"}
+--- ITER 8 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iiBttWJYPpGbUMebMV3evh9MTAKTB3JRZQ","error":null,"id":"rpc"}
+--- ITER 9 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iiqjzmb9MSQ54gykA5Y2KG4bNZWq8kp1Ya","error":null,"id":"rpc"}
+--- ITER 10 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ipYF7Fk5gahA99XJh3GY8rFMaAfDm1Uwx5","error":null,"id":"rpc"}
+--- ITER 11 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iq5gJyAbXec6YNAPgt4Jo7cYiNeNCAW9dg","error":null,"id":"rpc"}
+--- ITER 12 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ihhvL71cKP1fxLcwv4mtGfUXgDxMuoNooJ","error":null,"id":"rpc"}
+--- ITER 13 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ir48YKfBRtmQrFuADWE2SHcJaADun5gx7z","error":null,"id":"rpc"}
+--- ITER 14 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ioEW82aJpPyAmMKjV3j1PEbNWHY6BZ4S29","error":null,"id":"rpc"}
+--- ITER 15 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"imBfamexj2rVecm4LXfm4RLS6rwMLXe8RF","error":null,"id":"rpc"}
+--- ITER 16 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"inpg9oAw4rsMQPqtbFubq49Zq1YgYbKYXu","error":null,"id":"rpc"}
+--- ITER 17 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ifNYhVxMyfQAko9R1bB4ZGFbciTr25GRKM","error":null,"id":"rpc"}
+--- ITER 18 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"icoc8u65LKsTVUWw9vTarF2wfCUYTDWJGd","error":null,"id":"rpc"}
+--- ITER 19 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iYKSJxr2xmp4SNyPcRZ3zjF3xwdXvU26Av","error":null,"id":"rpc"}
+--- ITER 20 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iejLDamgKnTY2WNpEApHM534M47Xsyg4vg","error":null,"id":"rpc"}
+--- ITER 21 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iWnMQd22czNJA2D5Sq9CrquF2jEZJ7cMgx","error":null,"id":"rpc"}
+--- ITER 22 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iY8SY6ytRK2KS47ThajVKnApnYdSDX6HP6","error":null,"id":"rpc"}
+--- ITER 23 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"imJLq21xabs2UVcmodF41L5BHP1CczwpuD","error":null,"id":"rpc"}
+--- ITER 24 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ihWet9U7fDrmQ7iKATgXVtKuYeQqaNAw7Z","error":null,"id":"rpc"}
+--- ITER 25 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iTRArYjWffudXHRfQkuQzXHAn7mTa3TxhF","error":null,"id":"rpc"}
+--- ITER 26 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 27 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 28 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 29 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 30 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 31 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 32 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 33 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 34 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 35 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 36 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 37 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 38 ---
+curl-getblockcount-failed
+curl-getnewaddress-failed
+--- ITER 39 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iaYfroLFGqMwEmBH2TCH2qgaBLXdyMKJNs","error":null,"id":"rpc"}
+--- ITER 40 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iY6L6rCQ61uoDdK5PDBj1cyvGM378fmGeR","error":null,"id":"rpc"}
+--- ITER 41 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iYFwnb9NPXB9uaEqqZNWLQyWQtUSAzaw6S","error":null,"id":"rpc"}
+--- ITER 42 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ifBXNFKdeDruP53XQFT3JP4mxjaiSuPNan","error":null,"id":"rpc"}
+--- ITER 43 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ioi1YJJY23QQbm4kMVZvRFeRVMBE7se5tB","error":null,"id":"rpc"}
+--- ITER 44 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iaqAMKJgy9e1uSTLvok3LwqoonA2X63XEu","error":null,"id":"rpc"}
+--- ITER 45 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ihGxfQB2PmnV1LS15hWvU7mrTZteZW6BCn","error":null,"id":"rpc"}
+--- ITER 46 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ig89V6Y7ASo3tBYgMB6yKYJX5EFn4rtyFC","error":null,"id":"rpc"}
+--- ITER 47 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iiL4zNHgRewvxfpJFMwFdmuUeeUUBpKsYn","error":null,"id":"rpc"}
+--- ITER 48 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ip5mAYYZKvTurjtMTUq5wBfufxS1Lcg9AH","error":null,"id":"rpc"}
+--- ITER 49 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ifGxPxDuHuQwtCBz14PiEQb6gSZfq48knu","error":null,"id":"rpc"}
+--- ITER 50 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iVD9fPAKGkyaY4ngHKvMukR4pXb2LfJxvP","error":null,"id":"rpc"}
+--- ITER 51 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iWjK9najMsFqS3SK3zjbqqFvef2ZPDmQ4o","error":null,"id":"rpc"}
+--- ITER 52 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iptJxXNf5fHSDaBVUyB9osQpNjLidY91iy","error":null,"id":"rpc"}
+--- ITER 53 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"inQfAFuDCJoXFj8qpFfR1U7jNgNCyAntCw","error":null,"id":"rpc"}
+--- ITER 54 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iUenhLjihLStRp3AsMZXbUo9xX2Q8VXg6u","error":null,"id":"rpc"}
+--- ITER 55 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ieGZ1oAb7namvGVKH8kYGbKDztngLZ3Qqd","error":null,"id":"rpc"}
+--- ITER 56 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iUpGPYp8DcypsVhmuuVZML4f7pgoFfHwjC","error":null,"id":"rpc"}
+--- ITER 57 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ibZh4FG89DUWTw86aKeA8ekokQLKaPDhyz","error":null,"id":"rpc"}
+--- ITER 58 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"io2tnsbACry8BQ8BgY1TdwjUFiTZeEqNq1","error":null,"id":"rpc"}
+--- ITER 59 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"iUSTBmGR9zqQit3RLVoFvW99Q7fM4cBwoU","error":null,"id":"rpc"}
+--- ITER 60 ---
+{"result":0,"error":null,"id":"rpc"}
+{"result":"ig66trfWbMuZBU8qRKAETbu8hwdj5y5sK4","error":null,"id":"rpc"}
+{"result":"INSaNe server stopping","error":null,"id":"rpc"}
