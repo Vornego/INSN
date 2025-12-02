@@ -984,7 +984,7 @@ int SecureMsgReadIni()
     char cLine[512];
     char *pName, *pValue;
 
-    char cAddress[64];
+    char cAddress[128];
     int addrRecv, addrRecvAnon;
 
     while (fgets(cLine, 512, fp))
@@ -1015,7 +1015,7 @@ int SecureMsgReadIni()
         } else
         if (strcmp(pName, "key") == 0)
         {
-            int rv = sscanf(pValue, "%64[^|]|%d|%d", cAddress, &addrRecv, &addrRecvAnon);
+            int rv = sscanf(pValue, "%127[^|]|%d|%d", cAddress, &addrRecv, &addrRecvAnon);
             if (rv == 3)
             {
                 smsgAddresses.push_back(SecMsgAddress(std::string(cAddress), addrRecv, addrRecvAnon));
@@ -1481,27 +1481,33 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
 
                 std::set<SecMsgToken>& tokenSet = (*itb).second.setTokens;
 
-                try { vchDataOut.resize(8 + 16 * tokenSet.size()); } catch (std::exception& e)
+                size_t nTokens = tokenSet.size();
+                if (nTokens > SMSG_MAX_TOKENS)
                 {
-                    LogPrint("smessage", "vchDataOut.resize %u threw: %s.\n", 8 + 16 * tokenSet.size(), e.what());
+                    LogPrint("smessage", "Token set too large (%u), truncating to %u.\n", (unsigned)nTokens, (unsigned)SMSG_MAX_TOKENS);
+                    nTokens = SMSG_MAX_TOKENS;
+                }
+
+                try { vchDataOut.resize(8 + 16 * nTokens); } catch (std::exception& e)
+                {
+                    LogPrint("smessage", "vchDataOut.resize %u threw: %s.\n", (unsigned)(8 + 16 * nTokens), e.what());
                     continue;
                 };
                 memcpy(&vchDataOut[0], &time, 8);
 
                 uint8_t* p = &vchDataOut[8];
-                for (it = tokenSet.begin(); it != tokenSet.end(); ++it)
+                size_t cnt = 0;
+                for (it = tokenSet.begin(); it != tokenSet.end() && cnt < nTokens; ++it, ++cnt)
                 {
                     memcpy(p, &it->timestamp, 8);
                     memcpy(p+8, &it->sample, 8);
 
                     p += 16;
                 };
-            }
-            pfrom->PushMessage("smsgHave", vchDataOut);
-        };
-
-
-    } else
+            } // LOCK(cs_smsg)
+        } // for (uint32_t i ...)
+    } // if (strCommand == "smsgShow")
+    else
     if (strCommand == "smsgHave")
     {
         // -- peer has these messages in bucket
@@ -1563,6 +1569,11 @@ bool SecureMsgReceiveData(CNode* pfrom, std::string strCommand, CDataStream& vRe
                 if (it == tokenSet.end())
                 {
                     int nd = vchDataOut.size();
+                    if ((size_t)nd + 16 > SMSG_MAX_BUNCH_BYTES)
+                    {
+                        LogPrint("smessage", "vchDataOut would exceed max bunch size (%u), stopping additions.\n", (unsigned)SMSG_MAX_BUNCH_BYTES);
+                        break;
+                    }
                     try {
                         vchDataOut.resize(nd + 16);
                     } catch (std::exception& e) {

@@ -13,6 +13,8 @@
 #include <stdexcept>
 #include <vector>
 
+#include <openssl/bn.h>
+
 class CPubKey;
 
 // secp256k1:
