@@ -47,6 +47,13 @@ namespace Checkpoints
 
     bool CheckHardened(int nHeight, const uint256& hash)
     {
+        // Explicitly bypass hardened checkpoints in regtest to avoid
+        // static-init/selection edge-cases that can still enforce mainnet
+        // checkpoints when running local regression tests.
+        if (Params().NetworkID() == CChainParams::REGTEST) return true;
+
+        // For other networks treat testnet as empty checkpoints and mainnet
+        // uses the hardcoded map.
         MapCheckpoints& checkpoints = (TestNet() ? mapCheckpointsTestnet : MainMapCheckpoints());
 
         MapCheckpoints::const_iterator i = checkpoints.find(nHeight);
