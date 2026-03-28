@@ -428,8 +428,8 @@ namespace json_spirit
                 typedef boost::function< void( int64_t )       > Int_action;
                 typedef boost::function< void( uint64_t )      > Uint64_action;
 
-                Char_action   begin_obj  ( boost::bind( &Semantic_actions_t::begin_obj,   &self.actions_, _1 ) );
-                Char_action   end_obj    ( boost::bind( &Semantic_actions_t::end_obj,     &self.actions_, _1 ) );
+                Char_action   begin_obj  ( boost::bind( &Semantic_actions_t::begin_obj,   &self.actions_, boost::placeholders::_1 ) );
+                Char_action   end_obj    ( boost::bind( &Semantic_actions_t::end_obj,     &self.actions_, boost::placeholders::_1 ) );
                 Char_action   begin_array( boost::bind( &Semantic_actions_t::begin_array, &self.actions_, _1 ) );
                 Char_action   end_array  ( boost::bind( &Semantic_actions_t::end_array,   &self.actions_, _1 ) );
                 Str_action    new_name   ( boost::bind( &Semantic_actions_t::new_name,    &self.actions_, _1, _2 ) );

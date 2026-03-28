@@ -33,6 +33,10 @@ const unsigned int SMSG_MAX_MSG_BYTES   = 4096;              // the user input p
 // max size of payload worst case compression
 const unsigned int SMSG_MAX_MSG_WORST = LZ4_COMPRESSBOUND(SMSG_MAX_MSG_BYTES+SMSG_PL_HDR_LEN);
 
+// Limits to protect against peer-supplied excessive data sizes
+const unsigned int SMSG_MAX_TOKENS = 10000;      // max tokens to enumerate when replying to smsgShow
+const unsigned int SMSG_MAX_BUNCH_BYTES = 96000; // max bytes in a smsgMsg bunch
+
 
 
 #define SMSG_MASK_UNREAD            (1 << 0)

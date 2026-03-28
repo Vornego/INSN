@@ -3699,16 +3699,23 @@ int test_ecdsa_der_parse(const unsigned char *sig, size_t siglen, int certainly_
     sigptr = sig;
     parsed_openssl = (d2i_ECDSA_SIG(&sig_openssl, &sigptr, siglen) != NULL);
     if (parsed_openssl) {
-        valid_openssl = !BN_is_negative(sig_openssl->r) && !BN_is_negative(sig_openssl->s) && BN_num_bits(sig_openssl->r) > 0 && BN_num_bits(sig_openssl->r) <= 256 && BN_num_bits(sig_openssl->s) > 0 && BN_num_bits(sig_openssl->s) <= 256;
-        if (valid_openssl) {
-            unsigned char tmp[32] = {0};
-            BN_bn2bin(sig_openssl->r, tmp + 32 - BN_num_bytes(sig_openssl->r));
-            valid_openssl = memcmp(tmp, max_scalar, 32) < 0;
-        }
-        if (valid_openssl) {
-            unsigned char tmp[32] = {0};
-            BN_bn2bin(sig_openssl->s, tmp + 32 - BN_num_bytes(sig_openssl->s));
-            valid_openssl = memcmp(tmp, max_scalar, 32) < 0;
+        const BIGNUM *r_bn = NULL;
+        const BIGNUM *s_bn = NULL;
+        ECDSA_SIG_get0(sig_openssl, &r_bn, &s_bn);
+        if (r_bn != NULL && s_bn != NULL) {
+            valid_openssl = !BN_is_negative(r_bn) && !BN_is_negative(s_bn) && BN_num_bits(r_bn) > 0 && BN_num_bits(r_bn) <= 256 && BN_num_bits(s_bn) > 0 && BN_num_bits(s_bn) <= 256;
+            if (valid_openssl) {
+                unsigned char tmp[32] = {0};
+                BN_bn2bin(r_bn, tmp + 32 - BN_num_bytes(r_bn));
+                valid_openssl = memcmp(tmp, max_scalar, 32) < 0;
+            }
+            if (valid_openssl) {
+                unsigned char tmp[32] = {0};
+                BN_bn2bin(s_bn, tmp + 32 - BN_num_bytes(s_bn));
+                valid_openssl = memcmp(tmp, max_scalar, 32) < 0;
+            }
+        } else {
+            valid_openssl = 0;
         }
     }
     len_openssl = i2d_ECDSA_SIG(sig_openssl, NULL);

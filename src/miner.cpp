@@ -138,6 +138,12 @@ CBlock* CreateNewBlock(CReserveKey& reservekey, bool fProofOfStake, int64_t* pFe
         if (!reservekey.GetReservedKey(pubkey))
             return NULL;
         txNew.vout[0].scriptPubKey.SetDestination(pubkey.GetID());
+        // Height first in coinbase required for block.version=2
+        // Initialize coinbase scriptSig here for PoW so the coinbase
+        // meets consensus checks even before IncrementExtraNonce()
+        // (which will later add the extra-nonce).
+        txNew.vin[0].scriptSig = (CScript() << nHeight) + COINBASE_FLAGS;
+        assert(txNew.vin[0].scriptSig.size() <= 100);
     }
     else
     {

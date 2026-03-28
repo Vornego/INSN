@@ -25,3 +25,7 @@ qrc_*.cpp
 build
 
 !src/leveldb/Makefile
+*.pid
+*.log
+*.tgz
+pr_body.txt
